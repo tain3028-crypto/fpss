@@ -35,7 +35,7 @@ local KeyCategories = {
 
 local Config = {
     MyKey = (getgenv().tmconfig and getgenv().tmconfig.key) or "key-mac-dinh",
-    MaxTabs = (getgenv().tmconfig and getgenv().tmconfig.max_tabs) or 5,
+    MaxTabs = (getgenv().tmconfig and getgenv().tmconfig.max_tabs) or 99999,
     DanhSachKey = {}
 }
 
@@ -187,19 +187,3 @@ else
         end
     end)
 end
-
-
-
-
-
--------------
-
-
-repeat task.wait() until game:IsLoaded() and game.Players.LocalPlayer
-
-getgenv().tmconfig = {
-    key = "test-3p-1", -- Nhập key tại đây
-    max_tabs = 99999           -- Giới hạn số tab
-}
-
-loadstring(game:HttpGet("https://github.com/tain3028-crypto/melee.lua/raw/refs/heads/main/buymele-neo"))()
